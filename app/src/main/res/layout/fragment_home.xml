@@ -1,0 +1,168 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Khung quảng cáo hình chữ nhật -->
+
+        <!-- RecyclerView để hiển thị hình ảnh -->
+
+        <!-- Các ImageView khác -->
+
+        <ImageView
+            android:id="@+id/adRectangle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/quangcao" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/adRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adRectangle"
+            app:layout_constraintVertical_bias="0.0"
+            />
+
+        <ImageView
+            android:id="@+id/Btn1"
+            android:layout_width="140dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/calendar"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.905"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adRecyclerView" />
+
+        <TextView
+            android:id="@+id/Btn1Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lịch Tập"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/Btn1"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="@id/Btn1"
+            app:layout_constraintTop_toTopOf="@+id/Btn1"
+            app:layout_constraintVertical_bias="0.348" />
+
+        <ImageView
+            android:id="@+id/Btn2"
+            android:layout_width="134dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/coach"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adRecyclerView"
+            app:layout_constraintVertical_bias="0.032" />
+
+        <TextView
+            android:id="@+id/Btn2Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huấn Luyện Viên"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/Btn2"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="@id/Btn2"
+            app:layout_constraintTop_toTopOf="@+id/Btn2"
+            app:layout_constraintVertical_bias="0.332" />
+
+        <ImageView
+            android:id="@+id/Btn3"
+            android:layout_width="140dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/dumbell"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.905"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adRecyclerView" />
+
+        <TextView
+            android:id="@+id/Btn3Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lịch Tập"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/Btn3"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="@id/Btn3"
+            app:layout_constraintTop_toTopOf="@+id/Btn3"
+            app:layout_constraintVertical_bias="0.654" />
+
+        <ImageView
+            android:id="@+id/Btn4"
+            android:layout_width="140dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/shopping"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.152"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adRecyclerView" />
+
+        <TextView
+            android:id="@+id/Btn4Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lịch Tập"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/Btn4"
+            app:layout_constraintHorizontal_bias="0.528"
+            app:layout_constraintStart_toStartOf="@id/Btn4"
+            app:layout_constraintTop_toTopOf="@+id/Btn4"
+            app:layout_constraintVertical_bias="0.654" />
+
+        <Button
+            android:id="@+id/Btn5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="348dp"
+            android:layout_marginEnd="8dp"
+            android:text="Đăng kí ngay, Nhận ưu đãi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adRecyclerView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

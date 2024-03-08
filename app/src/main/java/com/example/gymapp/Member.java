@@ -61,6 +61,7 @@ public class Member extends AppCompatActivity {
                                 // Đăng nhập thành công, thực hiện các thao tác cần thiết
                                 Toast.makeText(Member.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Member.this, MemberActivity.class);
+                                intent.putExtra("MaNV", maNv);
                                 startActivity(intent);
 
                                 return;  // Kết thúc vòng lặp khi tìm thấy CCCD hợp lệ

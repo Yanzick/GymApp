@@ -5,65 +5,75 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/CCCD"
+        android:id="@+id/CCCD1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nhập CCCD" />
 
     <EditText
-        android:id="@+id/HovaTen"
+        android:id="@+id/HoVaten1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/CCCD"
+        android:layout_below="@id/CCCD1"
         android:layout_marginTop="8dp"
-        android:hint="Nhập Họ Và tên" />
+        android:hint="Nhập Họ Và Tên" />
 
     <EditText
-        android:id="@+id/EmalNV"
+        android:id="@+id/EmalNV1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/HovaTen"
+        android:layout_below="@id/HoVaten1"
         android:layout_marginTop="8dp"
         android:hint="Nhập Email" />
     <EditText
-        android:id="@+id/STD"
+        android:id="@+id/STD1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/EmalNV"
+        android:layout_below="@id/EmalNV1"
         android:layout_marginTop="8dp"
         android:hint="Nhập SĐT" />
     <EditText
-        android:id="@+id/MaNV"
+        android:id="@+id/MaNV1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/STD"
+        android:layout_below="@id/STD1"
         android:layout_marginTop="8dp"
         android:hint="Nhập Mã Nhân Viên" />
-    <EditText
-        android:id="@+id/MatKhau"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/MaNV"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Mật Khẩu" />
+
     <Button
-        android:id="@+id/DangKiNV"
+        android:id="@+id/ChonAnhButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/MatKhau"
+        android:layout_below="@id/MaNV1"
+        android:layout_marginTop="8dp"
+        android:text="Chọn Ảnh" />
+
+    <ImageView
+        android:id="@+id/AnhNhanVien"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/ChonAnhButton"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/DangKiNV1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AnhNhanVien"
         android:layout_marginTop="8dp"
         android:text="Đăng Kí Nhân Viên" />
+
     <TextView
-        android:id="@+id/resultTextView"
+        android:id="@+id/resultTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/DangKiNV"
+        android:layout_below="@id/DangKiNV1"
         android:layout_marginTop="16dp"
         android:text=""
         android:textColor="@android:color/black" />
 
     <ImageView
-        android:id="@+id/BackRes"
+        android:id="@+id/BackRes1"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_alignParentEnd="true"

@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class ResMem extends AppCompatActivity {
 
-    private EditText cccdEditText, hoEditText, tenEditText, emailEditText, stdEditText, maNvEditText, matKhauEditText;
+    private EditText cccdEditText, fullnameEditText, emailEditText, stdEditText, maNvEditText, matKhauEditText;
     private TextView resultTextView;
     private Button dangKiButton;
     private FirebaseFirestore db;
@@ -27,8 +27,8 @@ public class ResMem extends AppCompatActivity {
 
         // Ánh xạ các thành phần từ layout
         cccdEditText = findViewById(R.id.CCCD);
-        hoEditText = findViewById(R.id.Ho);
-        tenEditText = findViewById(R.id.Ten);
+        fullnameEditText = findViewById(R.id.HovaTen);
+
         emailEditText = findViewById(R.id.EmalNV);
         stdEditText = findViewById(R.id.STD);
         maNvEditText = findViewById(R.id.MaNV);
@@ -43,21 +43,19 @@ public class ResMem extends AppCompatActivity {
     private void addEmployeeToFirestore() {
         // Lấy thông tin từ EditText
         String cccd = cccdEditText.getText().toString();
-        String ho = hoEditText.getText().toString();
-        String ten = tenEditText.getText().toString();
+        String fullname = fullnameEditText.getText().toString();
         String email = emailEditText.getText().toString();
         String std = stdEditText.getText().toString();
         String maNv = maNvEditText.getText().toString();
         String matKhau = matKhauEditText.getText().toString();
-        if (cccd.isEmpty() || ho.isEmpty() || ten.isEmpty() || email.isEmpty() || std.isEmpty() || maNv.isEmpty() || matKhau.isEmpty()) {
+        if (cccd.isEmpty() || fullname.isEmpty() || email.isEmpty() || std.isEmpty() || maNv.isEmpty() || matKhau.isEmpty()) {
             resultTextView.setText("Vui lòng nhập đầy đủ thông tin");
             return;
         }
         // Tạo một đối tượng Map để lưu thông tin nhân viên
         Map<String, Object> NhanVien = new HashMap<>();
         NhanVien.put("CCCD", cccd);
-        NhanVien.put("Ho", ho);
-        NhanVien.put("Ten", ten);
+        NhanVien.put("Ho va Ten", fullname);
         NhanVien.put("Email", email);
         NhanVien.put("STD", std);
         NhanVien.put("MaNV", maNv);
