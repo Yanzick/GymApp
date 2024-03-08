@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/CCCD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập CCCD" />
+
+    <EditText
+        android:id="@+id/Ho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CCCD"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập Họ" />
+    <EditText
+        android:id="@+id/Ten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Ho"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập Tên" />
+    <EditText
+        android:id="@+id/EmalNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Ten"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập Email" />
+    <EditText
+        android:id="@+id/STD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EmalNV"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập SĐT" />
+    <EditText
+        android:id="@+id/MaNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/STD"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập Mã Nhân Viên" />
+    <EditText
+        android:id="@+id/MatKhau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MaNV"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập Mật Khẩu" />
+    <Button
+        android:id="@+id/DangKiNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MatKhau"
+        android:layout_marginTop="8dp"
+        android:text="Đăng Kí Nhân Viên" />
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DangKiNV"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/BackRes"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/login" />
+
+
+</RelativeLayout>
