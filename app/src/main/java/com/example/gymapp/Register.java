@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,18 +22,22 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity {
-    private EditText Email, Pass;
+    private EditText Email, Pass, Tenkh, sdtkh;
     private Button Register;
     private TextView Login;
     private EditText RePassR; // Thêm EditText cho xác nhận mật khẩu
     private TextInputLayout passwordLayout; // Thêm TextInputLayout cho mật khẩu
     private TextInputLayout confirmPasswordLayout; // Thêm TextInputLayout cho xác nhận mật khẩu
     private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,8 @@ public class Register extends AppCompatActivity {
 
         Email = findViewById(R.id.EmailR);
         Login = findViewById(R.id.loginR);
+        Tenkh = findViewById(R.id.Tenkh);
+        sdtkh = findViewById(R.id.stdkh);
         Register = findViewById(R.id.registerR);
         Pass = findViewById(R.id.PassR);
         RePassR = findViewById(R.id.RePassR); // Khởi tạo EditText cho xác nhận mật khẩu
@@ -97,6 +104,7 @@ public class Register extends AppCompatActivity {
     private void register() {
         String emailedit, passedit;
         emailedit = Email.getText().toString();
+        Log.d("Email","Email"+emailedit);
         passedit = Pass.getText().toString();
         String confirmPass = RePassR.getText().toString();
 
@@ -121,6 +129,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+                    saveUserDataToFirestore(emailedit);
                     Toast.makeText(getApplicationContext(), "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Register.this, MainActivity.class);
                     startActivity(intent);
@@ -156,4 +165,35 @@ public class Register extends AppCompatActivity {
             confirmPasswordLayout.setError(null);
         }
     }
+    private void saveUserDataToFirestore(String email) {
+        // Lấy thông tin từ EditText
+        String tenKH = Tenkh.getText().toString();
+        String sdtKH = sdtkh.getText().toString();
+
+        // Kiểm tra xem các trường thông tin có đầy đủ không
+        if (TextUtils.isEmpty(tenKH) || TextUtils.isEmpty(sdtKH)) {
+            Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Tạo một đối tượng Map để lưu thông tin người dùng
+        Map<String, Object> userData = new HashMap<>();
+        userData.put("TenKH", tenKH);
+        userData.put("SDT", sdtKH);
+        userData.put("Email", email);
+
+        // Thêm dữ liệu vào Firestore trong collection "KhachHang"
+        FirebaseFirestore.getInstance().collection("KhachHang").document(email)
+                .set(userData)
+                .addOnSuccessListener(documentReference -> {
+                    // Thêm dữ liệu thành công
+                    Toast.makeText(getApplicationContext(), "Lưu thông tin người dùng thành công", Toast.LENGTH_SHORT).show();
+                    Log.d("Ten Nguoi Dung","Ten: "+tenKH);
+                })
+                .addOnFailureListener(e -> {
+                    // Xử lý khi thêm dữ liệu thất bại
+                    Toast.makeText(getApplicationContext(), "Lỗi khi lưu thông tin người dùng: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+    }
+
 }

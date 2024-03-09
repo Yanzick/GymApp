@@ -1,20 +1,20 @@
 package com.example.gymapp;
 
 public class PT {
-    private int resourceID;
+    private String imageUrl;
     private String name;
 
-    public PT(int resourceID, String name) {
-        this.resourceID = resourceID;
+    public PT(String imageUrl, String name) {
+        this.imageUrl = imageUrl;
         this.name = name;
     }
 
-    public int getResourceID() {
-        return resourceID;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setResourceID(int resourceID) {
-        this.resourceID = resourceID;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {

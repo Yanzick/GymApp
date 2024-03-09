@@ -55,5 +55,9 @@ dependencies {
     // For control over item selection of both touch and mouse driven selection
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("com.google.guava:guava:30.1-android")
+    implementation("com.squareup.picasso:picasso:2.71828")
+
+
 
 }

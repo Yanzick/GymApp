@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.slideshow.SlideshowFragment">
 
-    <Button
-        android:id="@+id/Btn5"
+    <EditText
+        android:id="@+id/EmailHome"
         android:layout_width="406dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
@@ -21,15 +21,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.092"
-        android:text="Button5"/>
+        android:hint="Email"/>
 
-    <Button
-        android:id="@+id/Btn6"
+    <EditText
+        android:id="@+id/Namehome"
         android:layout_width="406dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:hint="Họ Và Tên"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,17 +38,16 @@
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207"
-        android:text="Button6"/>
+        app:layout_constraintVertical_bias="0.189" />
 
-    <Button
-        android:id="@+id/Btn7"
+    <EditText
+        android:id="@+id/STDHome"
         android:layout_width="406dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Button7"
+        android:hint="Số Điện Thoại"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,5 +55,5 @@
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.286" />
 </androidx.constraintlayout.widget.ConstraintLayout>

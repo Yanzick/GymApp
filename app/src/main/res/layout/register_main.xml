@@ -12,7 +12,19 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="16dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TenKH"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Tenkh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập Họ và Tên của bạn" />
+        </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/EmailR1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -26,7 +38,19 @@
                 android:layout_height="wrap_content"
                 android:hint="Nhập Email của bạn" />
         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/STDKH"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/stdkh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập Số điện thoại của bạn" />
+        </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/PassR1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
