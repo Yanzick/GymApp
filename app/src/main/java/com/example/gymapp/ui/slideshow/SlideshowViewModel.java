@@ -6,14 +6,38 @@ import androidx.lifecycle.ViewModel;
 
 public class SlideshowViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    private final MutableLiveData<String> email;
+    private final MutableLiveData<String> tenKH;
+    private final MutableLiveData<String> sdtKH;
 
     public SlideshowViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        email = new MutableLiveData<>();
+        tenKH = new MutableLiveData<>();
+        sdtKH = new MutableLiveData<>();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<String> getEmail() {
+        return email;
+    }
+
+    public LiveData<String> getTenKH() {
+        return tenKH;
+    }
+
+    public LiveData<String> getSdtKH() {
+        return sdtKH;
+    }
+
+    public void setEmail(String userEmail) {
+        email.setValue(userEmail);
+    }
+
+    public void setTenKH(String userName) {
+        tenKH.setValue(userName);
+    }
+
+    public void setSdtKH(String userPhone) {
+        sdtKH.setValue(userPhone);
     }
 }
+
