@@ -15,38 +15,39 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class PTAdapter extends RecyclerView.Adapter<PTAdapter.PTView> {
+public class BMIAdapter extends RecyclerView.Adapter<BMIAdapter.BMIView> {
     private Context mContext;
-    private List<PT> mList;
+    private List<BMI> mList;
     private OnItemClickListener mListener;
 
-    public PTAdapter(Context mContext) {
+    public BMIAdapter(Context mContext) {
         this.mContext = mContext;
     }
 
-    public void setData(List<PT> list) {
+    public void setData(List<BMI> list) {
         this.mList = list;
         notifyDataSetChanged();
     }
 
     @NonNull
     @Override
-    public PTView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pt, parent, false);
-        return new PTView(view);
+    public BMIView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_bmi, parent, false);
+        return new BMIView(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PTView holder, int position) {
-        PT pt = mList.get(position);
-        if (pt == null) {
+    public void onBindViewHolder(@NonNull BMIView holder, int position) {
+        BMI BMI = mList.get(position);
+        if (BMI == null) {
             return;
         }
 
         // Tải hình ảnh từ URL bằng Picasso
-        Picasso.get().load(pt.getImageUrl()).into(holder.imagePT);
+        Picasso.get().load(BMI.getImageUrl()).into(holder.imageSanPham);
 
-        holder.tvPT.setText(pt.getName());
+        holder.tvSanPham.setText(BMI.getName());
+
     }
 
     @Override
@@ -57,15 +58,15 @@ public class PTAdapter extends RecyclerView.Adapter<PTAdapter.PTView> {
         return 0;
     }
 
-    public class PTView extends RecyclerView.ViewHolder {
-        private CircleImageView imagePT;
-        private TextView tvPT;
+    public class BMIView extends RecyclerView.ViewHolder {
+        private CircleImageView imageSanPham;
+        private TextView tvSanPham;
 
-        public PTView(@NonNull View itemView) {
-            
+        public BMIView(@NonNull View itemView) {
+
             super(itemView);
-            imagePT = itemView.findViewById(R.id.Image1);
-            tvPT = itemView.findViewById(R.id.Text1);
+            imageSanPham = itemView.findViewById(R.id.ImageBMI);
+            tvSanPham = itemView.findViewById(R.id.TextBMI);
 
             itemView.setOnClickListener(view -> {
                 if (mListener != null) {

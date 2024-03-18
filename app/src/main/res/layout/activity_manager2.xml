@@ -10,5 +10,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Đăng kí nhân viên" />
-
+    <Button
+        android:id="@+id/SanPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/RegisMem"
+        android:text="Đăng kí sản phẩm" />
 </RelativeLayout>

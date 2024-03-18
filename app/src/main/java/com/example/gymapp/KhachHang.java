@@ -60,13 +60,13 @@ public class KhachHang extends AppCompatActivity {
         db.collection("KhachHang").document(fullname)
                 .set(KhachHang)
                 .addOnSuccessListener(documentReference -> {
-                    // Thêm dữ liệu thành công
+
                     String result = "Đã thêm Khách hàng: " + fullname;
                     resultTextView.setText(result);
                     reloadActivity();
                 })
                 .addOnFailureListener(e -> {
-                    // Xử lý khi thêm dữ liệu thất bại
+
                     String result = "Lỗi khi thêm nhân viên: " + e.getMessage();
                     Log.e("FirestoreError", result, e);
                     resultTextView.setText(result);

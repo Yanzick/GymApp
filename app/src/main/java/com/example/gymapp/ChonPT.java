@@ -36,7 +36,7 @@ import java.util.Map;
 
 public class ChonPT extends AppCompatActivity {
 
-    private EditText CCCD, HoVaten, EmalNV, STD, MaNV, MatKhau;
+    private EditText  HoVaten, EmalNV, STD, ID;
     private Button DangKiNV;
     private FirebaseFirestore firestore;
     private ImageView anhNhanVien;
@@ -46,7 +46,7 @@ public class ChonPT extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chon_pt);
-
+        ID = findViewById(R.id.ID);
         HoVaten = findViewById(R.id.HoVaten2);
         EmalNV = findViewById(R.id.EmalNV2);
         STD = findViewById(R.id.STD2);
@@ -74,7 +74,7 @@ public class ChonPT extends AppCompatActivity {
                                     Log.d("InfoActivity", "hoVaten: " + document.getString("Ho va Ten"));
                                     Log.d("InfoActivity", "email: " + document.getString("Email"));
                                     Log.d("InfoActivity", "sdt: " + document.getString("STD"));
-
+                                    ID.setText(document.getString("MaNV"));
                                     HoVaten.setText(document.getString("Ho va Ten"));
                                     EmalNV.setText(document.getString("Email"));
                                     STD.setText(document.getString("STD"));
@@ -98,6 +98,38 @@ public class ChonPT extends AppCompatActivity {
         } else {
             Toast.makeText(ChonPT.this, "Mã nhân viên không hợp lệ", Toast.LENGTH_SHORT).show();
         }
+       DangKiNV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Kiểm tra xem tên người dùng có hợp lệ không
+                if (hoTen == null || hoTen.isEmpty()) {
+                    Toast.makeText(ChonPT.this, "Không thể lấy tên người dùng", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                String maNV = ID.getText().toString();
+
+                // Tạo một đối tượng Map để lưu dữ liệu
+                Map<String, Object> newData = new HashMap<>();
+                newData.put("Ho va Ten", hoTen);
+
+                // Thêm hoặc cập nhật dữ liệu trong Firestore
+                firestore.collection("NhanVien").document(maNV).collection("KhachHang").document(hoTen)
+                        .set(newData, SetOptions.merge()) // Sử dụng SetOptions.merge() để không ghi đè dữ liệu
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(ChonPT.this, "Đăng ký nhân viên thành công", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(ChonPT.this, "Lỗi khi đăng ký nhân viên", Toast.LENGTH_SHORT).show();
+                                Log.e("ChonPT", "Lỗi khi đăng ký nhân viên", e);
+                            }
+                        });
+            }
+        });
 
     }
 }

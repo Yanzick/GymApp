@@ -17,6 +17,27 @@
         android:theme="@style/Theme.GymApp"
         tools:targetApi="31">
         <activity
+            android:name=".BMIMain"
+            android:exported="false" />
+        <activity
+            android:name=".MuaSam"
+            android:exported="false" />
+        <activity
+            android:name=".DangKiSanPham"
+            android:exported="false" />
+        <activity
+            android:name=".SanPham"
+            android:exported="false" />
+        <activity
+            android:name=".LichPTDaDK"
+            android:exported="false" />
+        <activity
+            android:name=".AddLich"
+            android:exported="false" />
+        <activity
+            android:name=".LichPT"
+            android:exported="false" />
+        <activity
             android:name=".KhachHang"
             android:exported="false" />
         <activity

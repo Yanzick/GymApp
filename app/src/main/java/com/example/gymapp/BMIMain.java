@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -16,46 +18,31 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class MainActivity_PT extends AppCompatActivity {
-    private RecyclerView rcv;
-    private PTAdapter PTAd;
+public class BMIMain extends AppCompatActivity {
+    private RecyclerView recyclerViewSanPham;
+    private BMIAdapter BMIAdapter;
     private FirebaseFirestore db;
-
+    private String maNV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_pt);
-
-        rcv = findViewById(R.id.rcv);
-        PTAd = new PTAdapter(this);
+        setContentView(R.layout.activity_bmi);
+        recyclerViewSanPham = findViewById(R.id.rcvBMI);
+        BMIAdapter = new BMIAdapter(this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
-        rcv.setLayoutManager(linearLayoutManager);
-        PTAd.setOnItemClickListener(new PTAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(int position, String name) {
-                // Xử lý sự kiện nhấp vào mục trong hoạt động
-                Log.d("MainActivity_PT", "Ten:" + name);
-
-                // Chuyển họ và tên sang ChonPT
-                Intent intent = new Intent(MainActivity_PT.this, ChonPT.class);
-                intent.putExtra("hoTen",name);
-                startActivity(intent);
-            }
-        });
+        recyclerViewSanPham.setLayoutManager(linearLayoutManager);
+        recyclerViewSanPham.setAdapter(BMIAdapter);
+        Intent intent = getIntent();
+        maNV = intent.getStringExtra("maNV");
         // Lấy dữ liệu từ Firestore và cập nhật RecyclerView
         getDataFromFirestore();
-
-        rcv.setAdapter(PTAd);
     }
-
     private void getDataFromFirestore() {
         db = FirebaseFirestore.getInstance();
-        List<PT> list = new ArrayList<>();
-        db.collection("NhanVien")
+        List<BMI> productList = new ArrayList<>();
+        db.collection("NhanVien").document(maNV).collection("KhachHang")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -64,13 +51,13 @@ public class MainActivity_PT extends AppCompatActivity {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 String imageUrl = document.getString("imageUrl");
                                 String name = document.getString("Ho va Ten");
-                                list.add(new PT(imageUrl, name));
-                                Log.d("InfoActivity", "hoVaten: " + document.getString("Ho va Ten"));
+                                productList.add(new BMI(imageUrl,name));
+                                Log.d("SanPham", "Tên sản phẩm: " + name);
                             }
-                            Log.d("InfoActivity", "Số lượng dữ liệu trong list: " + list.size());
-                            PTAd.setData(list);
+                            // Cập nhật RecyclerView sau khi lấy dữ liệu
+                            BMIAdapter.setData(productList);
                         } else {
-                            Log.e("MainActivity_PT", "Lỗi khi lấy dữ liệu: ", task.getException());
+                            Log.e("MainActivity_SanPham", "Lỗi khi lấy dữ liệu: ", task.getException());
                         }
                     }
                 });

@@ -12,7 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.gymapp.LichPT;
 import com.example.gymapp.MainActivity_PT;
+import com.example.gymapp.MuaSam;
 import com.example.gymapp.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -40,9 +42,22 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(requireActivity(), LichPT.class);
+                startActivity(intent);
+            }
+        });
 
         // Thêm sự kiện click hoặc thực hiện các tác vụ khác tại đây.
-
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(requireActivity(), MuaSam.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 

@@ -3,53 +3,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
-    <EditText
-        android:id="@+id/ID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="ID Nhan Vien" />
-    <EditText
-        android:id="@+id/HoVaten2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_below="@id/ID"
-        android:hint="Nhập Họ Và Tên" />
 
     <EditText
-        android:id="@+id/EmalNV2"
+        android:id="@+id/IDSanPham"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/HoVaten2"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Email" />
-    <EditText
-        android:id="@+id/STD2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/EmalNV2"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập SĐT" />
+        android:hint="Nhập ID Sản Phẩm" />
 
+    <EditText
+        android:id="@+id/TenSanPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/IDSanPham"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập Tên Sản Phẩm" />
+
+    <EditText
+        android:id="@+id/GiaSanPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TenSanPham"
+        android:layout_marginTop="8dp"
+        android:hint="Nhập Giá Sản Phẩm" />
+    <Button
+        android:id="@+id/ChonAnhSanPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/GiaSanPham"
+        android:layout_marginTop="8dp"
+        android:text="Chọn Ảnh" />
     <ImageView
-        android:id="@+id/AnhNhanVien2"
+        android:id="@+id/AnhSanPham"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_below="@id/STD2"
+        android:layout_below="@id/ChonAnhSanPham"
         android:layout_marginTop="8dp"
         android:visibility="gone" />
     <Button
-        android:id="@+id/DangKiNV2"
+        android:id="@+id/DangKiSanPham"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/AnhNhanVien2"
+        android:layout_below="@id/AnhSanPham"
         android:layout_marginTop="8dp"
-        android:text="Đăng Kí PT" />
-
+        android:text="Đăng Kí Nhân Viên" />
 
     <ImageView
-        android:id="@+id/BackRes1"
+        android:id="@+id/BackRes"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_alignParentEnd="true"

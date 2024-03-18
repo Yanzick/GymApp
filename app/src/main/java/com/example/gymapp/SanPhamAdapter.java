@@ -15,38 +15,39 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class PTAdapter extends RecyclerView.Adapter<PTAdapter.PTView> {
+public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.SanPhamView> {
     private Context mContext;
-    private List<PT> mList;
+    private List<SanPhamMain> mList;
     private OnItemClickListener mListener;
 
-    public PTAdapter(Context mContext) {
+    public SanPhamAdapter(Context mContext) {
         this.mContext = mContext;
     }
 
-    public void setData(List<PT> list) {
+    public void setData(List<SanPhamMain> list) {
         this.mList = list;
         notifyDataSetChanged();
     }
 
     @NonNull
     @Override
-    public PTView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pt, parent, false);
-        return new PTView(view);
+    public SanPhamView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_sanpham, parent, false);
+        return new SanPhamView(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PTView holder, int position) {
-        PT pt = mList.get(position);
-        if (pt == null) {
+    public void onBindViewHolder(@NonNull SanPhamView holder, int position) {
+        SanPhamMain sanpham = mList.get(position);
+        if (sanpham == null) {
             return;
         }
 
         // Tải hình ảnh từ URL bằng Picasso
-        Picasso.get().load(pt.getImageUrl()).into(holder.imagePT);
+        Picasso.get().load(sanpham.getImageUrl()).into(holder.imageSanPham);
 
-        holder.tvPT.setText(pt.getName());
+        holder.tvSanPham.setText(sanpham.getName());
+        holder.tvGia.setText(String.valueOf(sanpham.getPrice()));
     }
 
     @Override
@@ -57,16 +58,16 @@ public class PTAdapter extends RecyclerView.Adapter<PTAdapter.PTView> {
         return 0;
     }
 
-    public class PTView extends RecyclerView.ViewHolder {
-        private CircleImageView imagePT;
-        private TextView tvPT;
+    public class SanPhamView extends RecyclerView.ViewHolder {
+        private CircleImageView imageSanPham;
+        private TextView tvSanPham;
+        private TextView tvGia;
+        public SanPhamView(@NonNull View itemView) {
 
-        public PTView(@NonNull View itemView) {
-            
             super(itemView);
-            imagePT = itemView.findViewById(R.id.Image1);
-            tvPT = itemView.findViewById(R.id.Text1);
-
+            imageSanPham = itemView.findViewById(R.id.ImageSanpham);
+            tvSanPham = itemView.findViewById(R.id.TextSanPham);
+            tvGia = itemView.findViewById(R.id.TextGia);
             itemView.setOnClickListener(view -> {
                 if (mListener != null) {
                     int position = getAdapterPosition();

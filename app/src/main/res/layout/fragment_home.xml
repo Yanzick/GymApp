@@ -143,7 +143,7 @@
             android:id="@+id/Btn4Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lịch Tập"
+            android:text="Sản Phảm"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/Btn4"
             app:layout_constraintHorizontal_bias="0.528"

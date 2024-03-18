@@ -37,8 +37,6 @@ public class Register extends AppCompatActivity {
     private TextInputLayout passwordLayout; // Thêm TextInputLayout cho mật khẩu
     private TextInputLayout confirmPasswordLayout; // Thêm TextInputLayout cho xác nhận mật khẩu
     private FirebaseAuth mAuth;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
