@@ -6,14 +6,28 @@ import androidx.lifecycle.ViewModel;
 
 public class HomeViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+
+    private final MutableLiveData<String> tenKH;
+
 
     public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+
+        tenKH = new MutableLiveData<>();
+
     }
 
-    public LiveData<String> getText() {
-        return mText;
+
+
+    public LiveData<String> getTenKH() {
+        return tenKH;
     }
+
+
+
+    public void setTenKH(String userName) {
+        tenKH.setValue(userName);
+    }
+
+
 }
+

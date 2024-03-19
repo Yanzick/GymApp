@@ -30,5 +30,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_below="@id/LichDaDK"
-        android:text="Chỉ số BMI" />
+        android:text="Thông tin học viên" />
 </RelativeLayout>

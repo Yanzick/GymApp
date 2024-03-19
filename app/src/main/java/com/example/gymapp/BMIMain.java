@@ -36,6 +36,17 @@ public class BMIMain extends AppCompatActivity {
         recyclerViewSanPham.setAdapter(BMIAdapter);
         Intent intent = getIntent();
         maNV = intent.getStringExtra("maNV");
+        BMIAdapter.setOnItemClickListener(new BMIAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position, String name) {
+                Log.d("BMI", "Ten:" + name);
+
+                // Chuyển họ và tên sang ChonPT
+                Intent intent = new Intent(BMIMain.this, Chose.class);
+                intent.putExtra("Ho va Ten",name);
+                startActivity(intent);
+            }
+        });
         // Lấy dữ liệu từ Firestore và cập nhật RecyclerView
         getDataFromFirestore();
     }

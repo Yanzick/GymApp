@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.gymapp.ui.home.HomeViewModel;
 import com.example.gymapp.ui.slideshow.SlideshowFragment;
 import com.example.gymapp.ui.slideshow.SlideshowViewModel;
 import com.google.android.material.snackbar.Snackbar;
@@ -28,6 +29,7 @@ public class Home extends AppCompatActivity {
     private String tenKH;
     private String sdtKH;
     private SlideshowViewModel slideshowViewModel;
+    private HomeViewModel homeViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +39,13 @@ public class Home extends AppCompatActivity {
 
         setSupportActionBar(binding.appBarHome.toolbar);
         slideshowViewModel = new ViewModelProvider(this).get(SlideshowViewModel.class);
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
         Intent intent = getIntent();
         if (intent != null) {
             slideshowViewModel.setEmail(intent.getStringExtra("userEmail"));
             slideshowViewModel.setTenKH(intent.getStringExtra("tenKH"));
             slideshowViewModel.setSdtKH(intent.getStringExtra("sdtKH"));
+            homeViewModel.setTenKH(intent.getStringExtra("tenKH"));
         }
         Log.d("Email","Email: " + userEmail);
         Log.d("Ten","Ten: " + tenKH);

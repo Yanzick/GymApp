@@ -1,0 +1,255 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/Sang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại thực phẩm 1:"
+        android:textSize="16sp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"/>
+    <Spinner
+        android:id="@+id/LoaiThucPham1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/Sang"
+        android:layout_marginEnd="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <Spinner
+            android:id="@+id/ThucPham1Sang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Calo1Sang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 calo"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"/>
+        <Spinner
+            android:id="@+id/ThucPham2Sang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Calo2Sang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 calo"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"/>
+        <Spinner
+            android:id="@+id/ThucPham3Sang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Calo3Sang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 calo"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Trua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại thực phẩm 2:"
+        android:textSize="16sp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"/>
+    <Spinner
+        android:id="@+id/LoaiThucPham2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/Trua"
+        android:layout_marginEnd="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <Spinner
+            android:id="@+id/ThucPham1Trua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Calo1Trua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 calo"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"/>
+        <Spinner
+            android:id="@+id/ThucPham2Trua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Calo2Trua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 calo"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"/>
+        <Spinner
+            android:id="@+id/ThucPham3Trua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Calo3Trua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 calo"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/Toi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại thực phẩm 3:"
+        android:textSize="16sp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"/>
+    <Spinner
+        android:id="@+id/LoaiThucPham3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/Toi"
+        android:layout_marginEnd="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <Spinner
+            android:id="@+id/ThucPham1Toi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Calo1Toi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 calo"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"/>
+        <Spinner
+            android:id="@+id/ThucPham2Toi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Calo2Toi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 calo"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"/>
+        <Spinner
+            android:id="@+id/ThucPham3Toi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Calo3Toi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 calo"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/ChoseFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Đăng kí" />
+
+
+</LinearLayout>
+</ScrollView>

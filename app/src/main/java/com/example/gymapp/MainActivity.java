@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private Button Login;
     private TextView Register;
     private FirebaseAuth mAuth;
-    private ImageView Manager;
+    private ImageView Manager, Shopping;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         Register = findViewById(R.id.register);
         Pass = findViewById(R.id.Pass);
         Manager = findViewById(R.id.manager);
+        Shopping = findViewById(R.id.Shopping);
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Login2.class);
+                startActivity(intent);
+            }
+        });
+        Shopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MuaSam.class);
                 startActivity(intent);
             }
         });

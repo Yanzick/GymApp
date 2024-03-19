@@ -46,4 +46,16 @@
         android:layout_marginBottom="16dp"
         android:src="@drawable/manager2" />
 
+    <ImageView
+        android:id="@+id/Shopping"
+        android:layout_width="72dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="208dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toStartOf="@+id/manager"
+        android:src="@drawable/shopping" />
+
 </RelativeLayout>

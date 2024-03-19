@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/Name_BMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Họ Và Tên" />
+
+    <EditText
+        android:id="@+id/CanNang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Name_BMI"
+        android:layout_marginTop="8dp"
+        android:hint="Cân Nặng" />
+
+    <EditText
+        android:id="@+id/ChieuCao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CanNang"
+        android:layout_marginTop="8dp"
+        android:hint="Chiều Cao" />
+    <EditText
+        android:id="@+id/Vong1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ChieuCao"
+        android:layout_marginTop="8dp"
+        android:hint="Vòng 1" />
+    <EditText
+        android:id="@+id/Vong2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Vong1"
+        android:layout_marginTop="8dp"
+        android:hint="Vòng 2" />
+    <EditText
+        android:id="@+id/Vong3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Vong2"
+        android:layout_marginTop="8dp"
+        android:hint="Vòng 3" />
+    <EditText
+        android:id="@+id/ChisoBMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Vong3"
+        android:layout_marginTop="8dp"
+        android:hint="Chỉ số BMI" />
+
+    <Button
+        android:id="@+id/CapNhat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ChisoBMI"
+        android:layout_marginTop="8dp"
+        android:text="Cập Nhật" />
+
+</RelativeLayout>
