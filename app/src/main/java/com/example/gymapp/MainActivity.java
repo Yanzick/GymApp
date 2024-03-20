@@ -1,6 +1,7 @@
 package com.example.gymapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -21,13 +22,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
+import android.app.ProgressDialog;
 public class MainActivity extends AppCompatActivity {
     private EditText Email, Pass;
     private Button Login;
-    private TextView Register;
+    private TextView Register, Forgot;
     private FirebaseAuth mAuth;
     private ImageView Manager, Shopping;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         Pass = findViewById(R.id.Pass);
         Manager = findViewById(R.id.manager);
         Shopping = findViewById(R.id.Shopping);
+        Forgot = findViewById(R.id.Forgot);
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,6 +54,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 register();
+            }
+        });
+        Forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               ForgotPass();
             }
         });
         Manager.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +134,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         } else {
                             Toast.makeText(getApplicationContext(), "Lỗi khi truy vấn Firestore: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+    private void ForgotPass() {
+        String userEmail = Email.getText().toString().trim();
+
+        if (TextUtils.isEmpty(userEmail)) {
+            Toast.makeText(this, "Vui lòng nhập địa chỉ email của bạn để khôi phục mật khẩu.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Gửi email khôi phục mật khẩu
+        mAuth.sendPasswordResetEmail(userEmail)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this, "Một email khôi phục mật khẩu đã được gửi đến địa chỉ email của bạn. Vui lòng kiểm tra hòm thư đến của bạn.", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(MainActivity.this, "Gửi email khôi phục mật khẩu thất bại. Vui lòng thử lại sau.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

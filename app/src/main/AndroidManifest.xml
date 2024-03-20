@@ -17,7 +17,25 @@
         android:theme="@style/Theme.GymApp"
         tools:targetApi="31">
         <activity
+            android:name=".ChitietKhachHang"
+            android:exported="false" />
+        <activity
+            android:name=".QLKHMain"
+            android:exported="false" />
+        <activity
+            android:name=".QLNV"
+            android:exported="false" />
+        <activity
+            android:name=".BaiTap"
+            android:exported="false" />
+        <activity
+            android:name=".Forgot"
+            android:exported="false" />
+        <activity
             android:name=".FoodUser"
+            android:exported="false" />
+        <activity
+            android:name=".FoodUserMain"
             android:exported="false" />
         <activity
             android:name=".Food"

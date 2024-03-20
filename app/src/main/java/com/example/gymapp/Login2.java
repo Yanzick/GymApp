@@ -13,7 +13,6 @@ public class Login2 extends AppCompatActivity {
     private Button Member;
     private Button Admin;
     private TextView Rec;
-    private ImageView Back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +20,6 @@ public class Login2 extends AppCompatActivity {
         Member = findViewById(R.id.ButtonMem);
         Admin = findViewById(R.id.ButtonAmind);
         Rec = findViewById(R.id.Rec);
-        Back = findViewById(R.id.BackLog);
         Member.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,12 +41,6 @@ public class Login2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Login2.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }

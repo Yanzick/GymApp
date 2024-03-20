@@ -1,20 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/red">
 
-    <Button
-        android:id="@+id/RegisMem"
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Đăng kí nhân viên" />
-    <Button
-        android:id="@+id/SanPham"
+        android:layout_height="476dp"
+        android:background="@drawable/rb1"
+
+        android:src="@drawable/gymlogo" />
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_below="@id/RegisMem"
-        android:text="Đăng kí sản phẩm" />
-</RelativeLayout>
+        android:layout_height="252dp"
+        android:layout_marginTop="830dp"
+        android:background="@drawable/rb2" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="416dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/rouder_background">
+        <LinearLayout
+            android:layout_width="371dp"
+            android:layout_height="454dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="5dp">
+            <Button
+                android:id="@+id/RegisMem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/red"
+                android:text="Đăng kí nhân viên" />
+            <Button
+                android:id="@+id/SanPham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/RegisMem"
+                android:backgroundTint="@color/red"
+                android:text="Đăng kí sản phẩm" />
+            <Button
+                android:id="@+id/ButtonNV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ButtonMem"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/red"
+                android:text="Quản lý nhân viên" />
+            <Button
+                android:id="@+id/ButtonKH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ButtonMem"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/red"
+                android:text="Quản lý khách hàng" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

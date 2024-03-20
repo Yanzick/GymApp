@@ -30,7 +30,6 @@ public class Manager extends AppCompatActivity {
         mUsernameEditText = findViewById(R.id.MSQL);
         mPasswordEditText = findViewById(R.id.PassQL);
         mLoginButton = findViewById(R.id.LoginQL);
-        BackQL = findViewById(R.id.BackLogQL);
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

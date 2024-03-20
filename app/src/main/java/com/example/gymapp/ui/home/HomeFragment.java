@@ -7,21 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.gymapp.BMIUser;
+import com.example.gymapp.FoodUser;
 import com.example.gymapp.LichPT;
 import com.example.gymapp.MainActivity_PT;
-import com.example.gymapp.MuaSam;
 import com.example.gymapp.databinding.FragmentHomeBinding;
-import com.example.gymapp.ui.slideshow.SlideshowViewModel;
 
 public class HomeFragment extends Fragment {
 
@@ -84,8 +81,8 @@ public class HomeFragment extends Fragment {
                 // Xử lý dữ liệu và thực hiện các hành động mong muốn
                 if (tenKH != null) {
                     // Ví dụ: Hiển thị tên người dùng trong một Toast
-                    Toast.makeText(getContext(), "Xin chào, " + tenKH, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getContext(), BMIUser.class);
+
+                    Intent intent = new Intent(getContext(), FoodUser.class);
                     intent.putExtra("tenKH", tenKH);
                     startActivity(intent);
 
