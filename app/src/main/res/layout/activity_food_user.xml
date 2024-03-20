@@ -1,99 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/red">
 
-    <EditText
-        android:id="@+id/Name_FoodUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Họ Và Tên" />
+    <RelativeLayout
+        android:layout_width="376dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rouder_background"
+        android:padding="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="19dp">
 
-    <EditText
-        android:id="@+id/LoaiThucPham1User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Name_FoodUser"
-        android:layout_marginTop="8dp"
-        android:hint="Loại Thực Phẩm 1" />
+        <EditText
+            android:id="@+id/Name_FoodUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Họ Và Tên" />
 
-    <EditText
-        android:id="@+id/ThucPham1User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/LoaiThucPham1User"
-        android:layout_marginTop="8dp"
-        android:hint="Thực Phẩm 1" />
-    <EditText
-        android:id="@+id/ThucPham2User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ThucPham1User"
-        android:layout_marginTop="8dp"
-        android:hint="Thực Phẩm 2" />
-    <EditText
-        android:id="@+id/ThucPham3User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ThucPham2User"
-        android:layout_marginTop="8dp"
-        android:hint="Thực Phẩm 3" />
-    <EditText
-        android:id="@+id/LoaiThucPham2User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ThucPham3User"
-        android:layout_marginTop="8dp"
-        android:hint="Loại Thực Phẩm 2" />
-    <EditText
-        android:id="@+id/ThucPham4User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/LoaiThucPham2User"
-        android:layout_marginTop="8dp"
-        android:hint="Thực Phẩm 1" />
-    <EditText
-        android:id="@+id/ThucPham5User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ThucPham4User"
-        android:layout_marginTop="8dp"
-        android:hint="Thực Phẩm 2" />
-    <EditText
-        android:id="@+id/ThucPham6User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ThucPham5User"
-        android:layout_marginTop="8dp"
-        android:hint="Thực Phẩm 3" />
-    <EditText
-        android:id="@+id/LoaiThucPham3User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ThucPham6User"
-        android:layout_marginTop="8dp"
-        android:hint="Loại Thực Phẩm 3" />
-    <EditText
-        android:id="@+id/ThucPham7User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/LoaiThucPham3User"
-        android:layout_marginTop="8dp"
-        android:hint="Thực Phẩm 1" />
-    <EditText
-        android:id="@+id/ThucPham8User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ThucPham7User"
-        android:layout_marginTop="8dp"
-        android:hint="Thực Phẩm 2" />
-    <EditText
-        android:id="@+id/ThucPham9User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ThucPham8User"
-        android:layout_marginTop="8dp"
-        android:hint="Thực Phẩm 3" />
-</RelativeLayout>
+        <EditText
+            android:id="@+id/LoaiThucPham1User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Name_FoodUser"
+            android:layout_marginTop="8dp"
+            android:hint="Loại Thực Phẩm 1" />
 
+        <EditText
+            android:id="@+id/ThucPham1User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LoaiThucPham1User"
+            android:layout_marginTop="8dp"
+            android:hint="Thực Phẩm 1" />
+
+        <EditText
+            android:id="@+id/ThucPham2User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ThucPham1User"
+            android:layout_marginTop="8dp"
+            android:hint="Thực Phẩm 2" />
+
+        <EditText
+            android:id="@+id/ThucPham3User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ThucPham2User"
+            android:layout_marginTop="8dp"
+            android:hint="Thực Phẩm 3" />
+
+        <EditText
+            android:id="@+id/LoaiThucPham2User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ThucPham3User"
+            android:layout_marginTop="8dp"
+            android:hint="Loại Thực Phẩm 2" />
+
+        <EditText
+            android:id="@+id/ThucPham4User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LoaiThucPham2User"
+            android:layout_marginTop="8dp"
+            android:hint="Thực Phẩm 1" />
+
+        <EditText
+            android:id="@+id/ThucPham5User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ThucPham4User"
+            android:layout_marginTop="8dp"
+            android:hint="Thực Phẩm 2" />
+
+        <EditText
+            android:id="@+id/ThucPham6User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ThucPham5User"
+            android:layout_marginTop="8dp"
+            android:hint="Thực Phẩm 3" />
+
+        <EditText
+            android:id="@+id/LoaiThucPham3User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ThucPham6User"
+            android:layout_marginTop="8dp"
+            android:hint="Loại Thực Phẩm 3" />
+
+        <EditText
+            android:id="@+id/ThucPham7User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LoaiThucPham3User"
+            android:layout_marginTop="8dp"
+            android:hint="Thực Phẩm 1" />
+
+        <EditText
+            android:id="@+id/ThucPham8User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ThucPham7User"
+            android:layout_marginTop="8dp"
+            android:hint="Thực Phẩm 2" />
+
+        <EditText
+            android:id="@+id/ThucPham9User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ThucPham8User"
+            android:layout_marginTop="8dp"
+            android:hint="Thực Phẩm 3" />
+    </RelativeLayout>
+
+</FrameLayout>

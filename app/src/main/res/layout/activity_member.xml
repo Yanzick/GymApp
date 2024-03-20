@@ -52,19 +52,10 @@
                 android:layout_below="@id/infoMem"
                 android:text="Thêm lịch làm việc" />
             <Button
-                android:id="@+id/LichDaDK"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="@color/red"
-                android:layout_below="@id/BtnLichPT"
-                android:text="Lịch làm việc" />
-            <Button
                 android:id="@+id/BMI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_below="@id/LichDaDK"
                 android:backgroundTint="@color/red"
                 android:text="Thông tin học viên" />
 

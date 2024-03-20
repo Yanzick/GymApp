@@ -1,86 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/red">
 
-    <EditText
-        android:id="@+id/CCCD1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nhập CCCD" />
+    <RelativeLayout
+        android:layout_width="390dp"
+        android:layout_height="525dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/rouder_background"
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/HoVaten1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/CCCD1"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Họ Và Tên" />
+        <EditText
+            android:id="@+id/CCCD1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập CCCD" />
 
-    <EditText
-        android:id="@+id/EmalNV1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/HoVaten1"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Email" />
-    <EditText
-        android:id="@+id/STD1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/EmalNV1"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập SĐT" />
-    <EditText
-        android:id="@+id/MaNV1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/STD1"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Mã Nhân Viên" />
+        <EditText
+            android:id="@+id/HoVaten1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CCCD1"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập Họ Và Tên" />
 
-    <Button
-        android:id="@+id/ChonAnhButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/MaNV1"
-        android:layout_marginTop="8dp"
-        android:text="Chọn Ảnh" />
+        <EditText
+            android:id="@+id/EmalNV1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HoVaten1"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập Email" />
 
-    <ImageView
-        android:id="@+id/AnhNhanVien"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/ChonAnhButton"
-        android:layout_marginTop="8dp"
-        android:visibility="gone" />
-    <Button
-        android:id="@+id/DangKiNV1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/AnhNhanVien"
-        android:layout_marginTop="8dp"
-        android:text="Đăng Kí Nhân Viên" />
+        <EditText
+            android:id="@+id/STD1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EmalNV1"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập SĐT" />
 
-    <TextView
-        android:id="@+id/resultTextView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/DangKiNV1"
-        android:layout_marginTop="16dp"
-        android:text=""
-        android:textColor="@android:color/black" />
+        <EditText
+            android:id="@+id/MaNV1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/STD1"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập Mã Nhân Viên" />
 
-    <ImageView
-        android:id="@+id/BackRes1"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/login" />
+        <Button
+            android:id="@+id/ChonAnhButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/MaNV1"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/red"
+            android:text="Chọn Ảnh" />
+
+        <ImageView
+            android:id="@+id/AnhNhanVien"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/ChonAnhButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/DangKiNV1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AnhNhanVien"
+            android:backgroundTint="@color/red"
+            android:layout_marginTop="8dp"
+            android:text="Đăng Kí Nhân Viên" />
+
+        <TextView
+            android:id="@+id/resultTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DangKiNV1"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textColor="@android:color/black" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

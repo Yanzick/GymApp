@@ -1,50 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/red">
 
-    <EditText
-        android:id="@+id/HoVaten3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Họ Và Tên" />
+    <RelativeLayout
+        android:layout_width="377dp"
+        android:layout_height="313dp"
+        android:background="@drawable/rouder_background"
+        android:padding="16dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="300dp">
 
-    <EditText
-        android:id="@+id/EmalNV3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/HoVaten3"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Email" />
-    <EditText
-        android:id="@+id/STD3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/EmalNV3"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập SĐT" />
+        <EditText
+            android:id="@+id/HoVaten3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập Họ Và Tên" />
 
+        <EditText
+            android:id="@+id/EmalNV3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HoVaten3"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập Email" />
 
-    <Button
-        android:id="@+id/DangKiNV3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/STD3"
-        android:layout_marginTop="8dp"
-        android:text="Đăng Kí PT" />
-
-
-    <ImageView
-        android:id="@+id/BackRes3"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/login" />
+        <EditText
+            android:id="@+id/STD3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EmalNV3"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập SĐT" />
 
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/DangKiNV3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/STD3"
+            android:layout_marginTop="8dp"
+            android:text="Đăng Kí PT" />
+
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,62 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
-    <EditText
-        android:id="@+id/ID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="ID Nhan Vien" />
-    <EditText
-        android:id="@+id/HoVaten2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_below="@id/ID"
-        android:hint="Nhập Họ Và Tên" />
+    android:background="@color/red">
 
-    <EditText
-        android:id="@+id/EmalNV2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/HoVaten2"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Email" />
-    <EditText
-        android:id="@+id/STD2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/EmalNV2"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập SĐT" />
+    <RelativeLayout
+        android:layout_width="372dp"
+        android:layout_height="336dp"
+        android:background="@drawable/rouder_background"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
+        android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/AnhNhanVien2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/STD2"
-        android:layout_marginTop="8dp"
-        android:visibility="gone" />
-    <Button
-        android:id="@+id/DangKiNV2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/AnhNhanVien2"
-        android:layout_marginTop="8dp"
-        android:text="Đăng Kí PT" />
+        <EditText
+            android:id="@+id/ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="ID Nhan Vien" />
+
+        <EditText
+            android:id="@+id/HoVaten2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ID"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập Họ Và Tên" />
+
+        <EditText
+            android:id="@+id/EmalNV2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HoVaten2"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập Email" />
+
+        <EditText
+            android:id="@+id/STD2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EmalNV2"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập SĐT" />
+
+        <ImageView
+            android:id="@+id/AnhNhanVien2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/STD2"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/DangKiNV2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AnhNhanVien2"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/red"
+            android:text="Đăng Kí PT" />
 
 
-    <ImageView
-        android:id="@+id/BackRes1"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/login" />
-
-
-</RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

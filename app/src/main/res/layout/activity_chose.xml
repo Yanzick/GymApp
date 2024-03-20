@@ -1,24 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/red">
 
-
-
-    <Button
-        android:id="@+id/ChoseBMI"
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Chỉ số BMI" />
+        android:layout_height="476dp"
+        android:background="@drawable/rb1"
 
-    <Button
-        android:id="@+id/ChoseFood"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ChoseBMI"
-        android:layout_marginTop="8dp"
-        android:text="Chế độ ăn uống" />
+        android:src="@drawable/gymlogo" />
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="373dp"
+        android:layout_height="174dp"
+        android:background="@drawable/rouder_background"
+        android:padding="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="400dp">
+
+
+        <Button
+            android:id="@+id/ChoseBMI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/red"
+            android:text="Chỉ số BMI" />
+
+        <Button
+            android:id="@+id/ChoseFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ChoseBMI"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/red"
+            android:text="Chế độ ăn uống" />
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,61 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/red">
 
-    <EditText
-        android:id="@+id/IDSanPham"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nhập ID Sản Phẩm" />
+    <RelativeLayout
+        android:layout_width="375dp"
+        android:layout_height="416dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/rouder_background"
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/TenSanPham"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/IDSanPham"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Tên Sản Phẩm" />
+        <EditText
+            android:id="@+id/IDSanPham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập ID Sản Phẩm" />
 
-    <EditText
-        android:id="@+id/GiaSanPham"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/TenSanPham"
-        android:layout_marginTop="8dp"
-        android:hint="Nhập Giá Sản Phẩm" />
-    <Button
-        android:id="@+id/ChonAnhSanPham"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/GiaSanPham"
-        android:layout_marginTop="8dp"
-        android:text="Chọn Ảnh" />
-    <ImageView
-        android:id="@+id/AnhSanPham"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/ChonAnhSanPham"
-        android:layout_marginTop="8dp"
-        android:visibility="gone" />
-    <Button
-        android:id="@+id/DangKiSanPham"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/AnhSanPham"
-        android:layout_marginTop="8dp"
-        android:text="Đăng Kí Nhân Viên" />
+        <EditText
+            android:id="@+id/TenSanPham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/IDSanPham"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập Tên Sản Phẩm" />
 
-    <ImageView
-        android:id="@+id/BackRes"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/login" />
+        <EditText
+            android:id="@+id/GiaSanPham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TenSanPham"
+            android:layout_marginTop="8dp"
+            android:hint="Nhập Giá Sản Phẩm" />
+
+        <Button
+            android:id="@+id/ChonAnhSanPham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GiaSanPham"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/red"
+
+            android:text="Chọn Ảnh" />
+
+        <ImageView
+            android:id="@+id/AnhSanPham"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/ChonAnhSanPham"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/DangKiSanPham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AnhSanPham"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/red"
+            android:text="Đăng Kí Sản Phẩm" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

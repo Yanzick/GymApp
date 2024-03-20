@@ -1,58 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/red">
 
-    <EditText
-        android:id="@+id/Name_BMIUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Họ Và Tên" />
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="425dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/rouder_background"
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/CanNangUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Name_BMIUser"
-        android:layout_marginTop="8dp"
-        android:hint="Cân Nặng" />
+        <EditText
+            android:id="@+id/Name_BMIUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Họ Và Tên" />
 
-    <EditText
-        android:id="@+id/ChieuCaoUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/CanNangUser"
-        android:layout_marginTop="8dp"
-        android:hint="Chiều Cao" />
-    <EditText
-        android:id="@+id/Vong1User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ChieuCaoUser"
-        android:layout_marginTop="8dp"
-        android:hint="Vòng 1" />
-    <EditText
-        android:id="@+id/Vong2User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Vong1User"
-        android:layout_marginTop="8dp"
-        android:hint="Vòng 2" />
-    <EditText
-        android:id="@+id/Vong3User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Vong2User"
-        android:layout_marginTop="8dp"
-        android:hint="Vòng 3" />
-    <EditText
-        android:id="@+id/ChisoBMIUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Vong3User"
-        android:layout_marginTop="8dp"
-        android:hint="Chỉ số BMI" />
+        <EditText
+            android:id="@+id/CanNangUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Name_BMIUser"
+            android:layout_marginTop="8dp"
+            android:hint="Cân Nặng" />
+
+        <EditText
+            android:id="@+id/ChieuCaoUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CanNangUser"
+            android:layout_marginTop="8dp"
+            android:hint="Chiều Cao" />
+
+        <EditText
+            android:id="@+id/Vong1User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ChieuCaoUser"
+            android:layout_marginTop="8dp"
+            android:hint="Vòng 1" />
+
+        <EditText
+            android:id="@+id/Vong2User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Vong1User"
+            android:layout_marginTop="8dp"
+            android:hint="Vòng 2" />
+
+        <EditText
+            android:id="@+id/Vong3User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Vong2User"
+            android:layout_marginTop="8dp"
+            android:hint="Vòng 3" />
+
+        <EditText
+            android:id="@+id/ChisoBMIUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Vong3User"
+            android:layout_marginTop="8dp"
+            android:hint="Chỉ số BMI" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

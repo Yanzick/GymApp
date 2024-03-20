@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
-    android:layout_marginEnd="10dp">
+    android:layout_marginEnd="10dp"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:background="@drawable/rb5">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/ImageBMI"
             android:layout_width="70dp"
@@ -20,6 +22,8 @@
             android:layout_height="wrap_content"
             android:textSize="16dp"
             android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:layout_centerVertical="true"
             android:layout_marginStart="50dp"
             android:layout_toEndOf="@+id/ImageBMI"

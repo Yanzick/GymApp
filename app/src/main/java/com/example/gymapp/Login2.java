@@ -19,7 +19,7 @@ public class Login2 extends AppCompatActivity {
         setContentView(R.layout.activity_login2);
         Member = findViewById(R.id.ButtonMem);
         Admin = findViewById(R.id.ButtonAmind);
-        Rec = findViewById(R.id.Rec);
+
         Member.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,13 +34,7 @@ public class Login2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Rec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Login2.this,recruitment.class);
-                startActivity(intent);
-            }
-        });
+
 
     }
 }
