@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.gymapp.AddLich2;
 import com.example.gymapp.BMIUser;
 import com.example.gymapp.FoodUser;
 import com.example.gymapp.LichPT;
@@ -36,6 +37,7 @@ public class HomeFragment extends Fragment {
         ImageView button3 = binding.Btn3;
         ImageView button4 = binding.Btn4;
         Button button5 = binding.Btn5;
+        String tenKH = getActivity().getIntent().getStringExtra("tenKH");
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +48,8 @@ public class HomeFragment extends Fragment {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(requireActivity(), LichPT.class);
+                Intent intent = new Intent(requireActivity(), AddLich2.class);
+                intent.putExtra("tenKH", tenKH);
                 startActivity(intent);
             }
         });
@@ -57,7 +60,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // Nhận dữ liệu từ MainActivity
-                String tenKH = getActivity().getIntent().getStringExtra("tenKH");
+
                 Log.d("SanPham", "Tên sản phẩm: " + tenKH);
                 // Xử lý dữ liệu và thực hiện các hành động mong muốn
                 if (tenKH != null) {

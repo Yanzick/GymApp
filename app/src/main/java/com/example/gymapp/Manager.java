@@ -19,7 +19,7 @@ public class Manager extends AppCompatActivity {
     private EditText mUsernameEditText;
     private EditText mPasswordEditText;
     private Button mLoginButton;
-    private ImageView BackQL;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +51,6 @@ public class Manager extends AppCompatActivity {
             }
         });
 
-        BackQL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Manager.this, Login2.class);
-                startActivity(intent);
-            }
-        });
     }
 
     private void checkUserRole() {

@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/red"
     tools:context=".ui.gallery.GalleryFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="253dp"
-        android:layout_height="315dp"
+        android:layout_height="103dp"
         android:layout_gravity="center"
         android:background="@drawable/rouder_background">
 
@@ -25,10 +25,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.092" />
+            app:layout_constraintVertical_bias="0.285" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
